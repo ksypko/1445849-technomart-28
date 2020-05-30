@@ -3,44 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   	<header>
-  		<section>
+  		<section class="header-first">
   			<div>
-  				<a href="index.html">ТЕХНОМАРТ</a>
+  				<a href="index.html">	
+  					<img src="img/logo.svg" width="107px" height="17px" alt="Логотип интернет-магазина Техномарт" class="logo">
+  				</a>
   			</div>
   			<div>
-  				<input type="text" name="search" placeholder="Поиск:">
+  				<input type="text" name="search" placeholder="Поиск:" class="header-search">
   			</div>
   			<div>
-  				<a href="">Закладки: 0</a>
+  				<a href="" class="header-bookmark">Закладки: 0</a>
   			</div>
   			<div>
-  				<a href="">Корзина: 0</a>
+  				<a href="" class="header-cart">Корзина: 0</a>
   			</div>
   			<div>
-  				<a href="">Оформить заказ</a>
+  				<a href="" class="header-checkout">Оформить заказ</a>
   			</div>
   		</section>
-  		<section>
-  			<div>
+  		<section class="header-second">
+  			<div class="header-description">
   				<p><i>Интернет-магазин<br>
   				строительных материалов<br>
   				и инструментов для ремонта</i>
   				</p>
   			</div>
   			<div>
-  				<a href="tel:+78125550555">+7 (812) 555-05-55</a><br>
+  				<a href="tel:+78125550555" class="header-phone">+7 (812) 555-05-55</a><br>
   				<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
   			</div>
   			<div>
-  				<a href="">Войти</a>
-  				<a href="">Регистрация</a>
+  				<a href="" class="header-login">Войти</a>
+  				<a href="" class="header-register">Регистрация</a>
   			</div>
-  		</section>
-  		<nav>
-  			<ul>
+  		<nav class="main-navigation">
+  			<ul class="site-navigation">
   				<li><a href="">Главная</a></li>
   				<li><a href="">Компания</a></li>
   				<li><a href="catalog.html">Каталог</a></li>
@@ -50,9 +54,10 @@
   				<li><a href="">Контакты</a></li>
   			</ul>
   		</nav>
+  		</section>
   	</header>
   	<main>
-    	<h1>Техномарт</h1>
+    	<h1 class="visually-hidden">Техномарт</h1>
     	<section>
     		<div>
     			<span>NEW</span>
@@ -72,7 +77,7 @@
     		</div>
     		<div>
     			<a href="" ><span class="visually-hidden">Назад</span></a>
-    			<a href=""><span class="visually-hidden">Вперед></span></a>
+    			<a href=""><span class="visually-hidden">Вперед</span></a>
     			<div>
     				<figure>        					
     					<img src="img/slide_perf.jpg" width="620px" height="266px" alt="Перфораторы">
@@ -87,7 +92,7 @@
     				</figure>
     				<p>Дрели</p>
     				<p>Соседям на радость!</p>
-    				<a href="catalog.html">Открыть каталог</a>
+    				<a href="catalog.html" class="buttom-default">Открыть каталог</a>
     			</div>
     		</div>
     		<div>
@@ -106,7 +111,7 @@
     	<section>
     		<div>
     			<h2>Популярные товары</h2>
-    			<a href="">Все популярные товары</a>
+    			<a href="" class="buttom-default">Все популярные товары</a>
     		<div>
     			<article>
   				<img src="img/bosch_bfg_9000.jpg" width="184px" height="164px" alt="">
@@ -154,7 +159,7 @@
     	<section>
     		<div>
     			<h2>Популярные производители:</h2>
-    			<a href="">Все производители</a>
+    			<a href="" class="buttom-default">Все производители</a>
     		</div>
     		<div>
     			<ul>
@@ -192,42 +197,43 @@
     			<a href="">Отправить заявку</a>
     		</div>
     	</section>
-    	<section>
-    		<h2>КОМПАНИЯ «ТЕХНОМАРТ»</h2>
+    	<section class="about">
+    		<h2>Компания «ТЕХНОМАРТ»</h2>
     		<p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>	
     		<p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-    		<ul>
+    		<ul class="about-company">
     			<li>Деловые линии</li>
     			<li>Автотрейдинг</li>
     			<li>ЖелДорЭкспедиция</li>
     		</ul>
-    		<a href="">Подробнее о компании</a>
+    		<a href="" class="buttom-default">Подробнее о компании</a>
     	</section>
-    	
-    	<section>
+    	<section class="contacts">
     		<h2>Контакты</h2>
     		<p>Вы можете забрать товар сами, <br>
     		заехав в наш офис:
 			</p>
 			<img src="img/map.png" width="300px" height="150px" alt=""><br>
-			<button>Заблудились? Напишите нам!</button>
+			<a href="" class="buttom-default">Заблудились? Напишите нам!</a>
     	</section>
     </main>
-    <footer>
-    	<section>
-    		<a href="index.html">ТЕХНОМАРТ</a>
-    		<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+    <footer class="footer">
+    	<section class="footer-first">
+    		<div>
+    			<a href="index.html"><img src="img/logo.svg" width="137px" height="22px" alt="Логотип интернет-магазина Техномарт" class="footer-logo"></a>
+    		<p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
     		+7 (812) 555-05-55
     		</p>
-    		<div>
-    			<ul>
+    		</div>
+    		<div class="footer-menu">
+    			<ul class="footer-menu-one">
     				<li><a href="">Компания</a></li>
     				<li><a href="">Новости</a></li>
     				<li><a href="catalog.html">Каталог</a></li>
     				<li><a href="">Доставка</a></li>
     				<li><a href="">Контакты</a></li>
     			</ul>
-    			<ul>
+    			<ul class="footer-menu-two">
     				<li><a href="">Материалы</a></li>
     				<li><a href="">Техника</a></li>
     				<li><a href="">Инструмент</a></li>
@@ -235,7 +241,7 @@
     			</ul>
     		</div>
     	</section>
-    	<section>
+    	<section class="footer-second">
     		<div>
     			<p>© 2010-2019 Компания «Техномарт»<br>
     			Все права защищены
@@ -258,7 +264,7 @@
     		</div>
     	</section>
     </footer>
-    <section>
+    <section class="popup-form">
     	<button name="close" id="form-close"></button>
     	<label for="form-close" class="visually-hidden">Закрыть</label>	
     	<form action="https://echo.htmlacademy.ru/" method="post">
@@ -277,7 +283,7 @@
 			<button type="submit">Оформить заказ</button>	  		    		
     	</form>
     </section>
-    <section>
+    <section class="popup-map">
     	<div>
 	    	<button name="close-map" id="map-close"></button>
 	    	<label for="map-close" class="visually-hidden">Закрыть</label>

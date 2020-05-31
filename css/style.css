@@ -357,6 +357,19 @@ img {
 	padding-right: 78px;
 	padding-left: 78px;
 }
+/* Breadcrumbs*/
+.breadcrumbs {
+	list-style: none;
+}
+.breadcrumbs-item {
+	font-family: PT Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
 /* Popup Forms */
 .popup{
 	display: none;

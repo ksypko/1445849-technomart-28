@@ -71,15 +71,15 @@
 	  		<ul class="breadcrumbs">
 	  			<li class="breadcrumbs-item"><a href="index.html" aria-label="Главная" class=" breadcrumbs-home"></a></li>
 	  			<li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Каталог</a></li>
-	  			<li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Инструменты</a></li>
+	  			<li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Инструмент</a></li>
 	  			<li class="breadcrumbs-item breadcrumbs-current"><a href="" class="breadcrumbs-link">Перфораторы</a></li>
 	  		</ul>
 	 		<h1 class="page-title">Перфораторы</h1>
 		  	<aside class="filters">
 		  		<p class="filter-title">Фильтр:</p>
 		  		<form action="https://echo.htmlacademy.ru/" method="get">
-			  	<fieldset class="filter-item">
-		  			<legend>Цена:</legend>
+			  	<fieldset class="filter-item filter-price">
+		  			<legend class="filter-legend-price">Цена:</legend>
 		  			<div class="range-filter">
 		  				<div class="range-controls">
 				  			<div class="scale">
@@ -90,12 +90,12 @@
 			  			</div>
 			  			<div class="price-controls">
 				  			<input type="number" name="min-price" value="0"> —
-				  			<input type="number" name="max-price" value="300">
+				  			<input type="number" name="max-price" value="30000">
 			  			</div>
 		  			</div>
 		  		</fieldset>
-		  		<fieldset class="filter-item">
-		  			<legend>Производители:</legend>
+		  		<fieldset class="filter-item filter-brands">
+		  			<legend class="filter-legend-brands">Производители:</legend>
 		  			<ul>
 				  		<li class="filter-option">
 				  			<input class="visually-hidden filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
@@ -119,8 +119,8 @@
 				  		</li>
 			  		</ul>
 			  	</fieldset>
-		  		<fieldset class="filter-item">
-		  				<legend>Питание:</legend>
+		  		<fieldset class="filter-item filter-power">
+		  				<legend class="filter-legend-power">Питание:</legend>
 		  				<ul>
 					  		<li class="filter-option">
 					  			<input class="visually-hidden  filter-input-radio" type="radio" name="power" value="battery" id="filter-battery" checked>
@@ -140,9 +140,11 @@
 		  			
 		  			<ul class="sort-list">
 		  				<li class="sort-title">Сортировка:</li>
-	            		<li><a href="" class="sort-item sort-current">По цене</a></li>
-		  				<li><a href="" class="sort-item">По типу</a></li>
-		  				<li><a href="" class="sort-item">По функционалу</a></li>
+	            		<li class="sort-type">
+	            		<a href="" class="sort-item sort-current">По цене</a>
+		  				<a href="" class="sort-item">По типу</a>
+		  				<a href="" class="sort-item">По функционалу</a>
+		  				</li>
 		  				<li>
 		  					<div class="sorting-buttons">
 		  						<a href="" class="sort-up sort-current-button"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">

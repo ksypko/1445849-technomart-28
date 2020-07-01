@@ -1121,6 +1121,28 @@ input[type=search]:focus+label path {
 	margin: 0;
 	padding: 0;
 }
+.arrow-left {
+	content: "";
+	position: absolute;
+	width: 21px;
+	height: 39px;
+	top: 122px;
+	left: 24px;
+	background-image: url("../img/icon-left.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.arrow-right {
+	content: "";
+	position: absolute;
+	width: 21px;
+	height: 39px;
+	top: 122px;
+	right: 20px;
+	background-image: url("../img/icon-right.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
 /* Products */
 .page-catalog {
 	display: grid;
@@ -1652,7 +1674,7 @@ input[type=search]:focus+label path {
 	position: absolute;
 	width: 11px;
 	height: 10px;
-	top:8px;
+	top:7px;
 	right: 17px;
 	transform: rotate(180deg);
 }

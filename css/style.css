@@ -1786,23 +1786,31 @@ input[type=search]:focus+label path {
 }
 /* Popup Forms */
 .popup {
-	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
+	bottom: 0;
 	left: 0;
 	margin: auto;
+	display: none;
+}
+.popup-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.popup-error {
+  animation: shake 0.6s;
 }
 .popup-login {
 	width: 620px;
+	height: max-content;
 	border-top: 7px solid var(--basic-red);
 	border-bottom: 112px solid var(--popup-grey);
 	background-color: var(--basic-white);
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-	z-index: 20;
-	left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	top: 50%;
+	transform: translateY(calc(-50% + 0px));
+	box-sizing: border-box;
 }
 .popup-form {
 	display: flex;
@@ -1812,6 +1820,7 @@ input[type=search]:focus+label path {
 	padding-right: 80px;
 	padding-left: 80px;
 	margin-top: 39px;
+	padding-bottom: 37px;
 }
 .popup-item {
 	width: 220px;
@@ -1859,7 +1868,7 @@ input[type=search]:focus+label path {
 .popup-button {
 	display: block;
 	position: absolute;
-	top: 308px;
+	top: 348px;
 	font-family: Cuprum;
 	font-style: normal;
 	font-weight: normal;
@@ -2171,4 +2180,47 @@ input[type=search]:focus+label path {
 	margin: 0;
   	justify-self: end;
   	margin-left: 50px;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(calc(-50% + 30px));
+  }
+
+  90% {
+    transform: translateY(calc(-50% + -10px));
+  }
+
+  100% {
+    transform: translateY(calc(-50% + 0px));
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+    
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

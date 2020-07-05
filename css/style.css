@@ -849,6 +849,7 @@ input[type=search]:focus+label path {
 }
 .popular-title {
 	display: inline-block;
+    vertical-align: baseline;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
@@ -863,6 +864,7 @@ input[type=search]:focus+label path {
 }
 .popular-button {
 	display: inline-block;
+    vertical-align: baseline;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -883,6 +885,7 @@ input[type=search]:focus+label path {
 }
 .popular-button-brands {
 	display: inline-block;
+    vertical-align: baseline;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -1068,6 +1071,7 @@ input[type=search]:focus+label path {
 }
 .slider-button {
 	display: inline-block;
+    vertical-align: baseline;
 	position: absolute;
 	bottom: 27px;
 	left: 24px;

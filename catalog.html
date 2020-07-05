@@ -5,6 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/min.style.css" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -13,7 +14,7 @@
   		<section class="container">
 	  		<div class="header-one">
 	  				<a href="index.html">	
-	  				<img src="img/logo.svg" width="108px" height="18px" alt="Логотип интернет-магазина Техномарт" class="logo">
+	  				<img src="img/logo.svg" width="108" height="18" alt="Логотип интернет-магазина Техномарт" class="logo">
 	  				</a>
 	  				<div class="search">
 	  					<input type="search" name="search" id="search" placeholder="Поиск:" class="header-search">
@@ -89,8 +90,10 @@
 		            		<div class="toggle toggle-max" tabindex="0"></div>
 			  			</div>
 			  			<div class="price-controls">
-				  			<input type="number" name="min-price" value="0"> —
-				  			<input type="number" name="max-price" value="30000">
+			  				<label for="min-price"></label>
+				  			<input type="number" name="min-price" value="0" id="min-price"> —
+				  			<label for="max-price"></label>
+				  			<input type="number" name="max-price" value="30000" id="max-price">
 			  			</div>
 		  			</div>
 		  		</fieldset>

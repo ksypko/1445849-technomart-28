@@ -1,9 +1,9 @@
 var loginLink = document.querySelector(".contacts-button");
 var loginPopup = document.querySelector(".popup-login");
-var loginClose = loginPopup.querySelector(".form-close");
-var loginForm = loginPopup.querySelector(".popup-form");
-var loginLogin = loginPopup.querySelector(".form-name");
-var loginEmail = loginPopup.querySelector(".form-email");
+var loginClose = document.querySelector(".form-close");
+var loginForm = document.querySelector(".popup-form");
+var loginLogin = document.querySelector(".form-name");
+var loginEmail = document.querySelector(".form-email");
 
 var isStorageSupport = true;
 var storage = "";
@@ -13,6 +13,7 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
+if (loginLink) { 
 
 loginLink.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -54,3 +55,57 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+}
+var mapLink = document.querySelector(".map");
+
+  var mapPopup = document.querySelector(".popup-map");
+  var mapClose = document.querySelector(".map-close");
+  
+ if (mapLink) { 
+  mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("popup-show");
+  });
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("popup-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("popup-show")) {
+        evt.preventDefault();
+        mapPopup.classList.remove("popup-show");
+      }
+    }
+  });
+}
+var cartLink = document.querySelectorAll('.button-buy'),
+      result;
+var cartPopup = document.querySelector(".popup-cart");
+var cartClose = document.querySelector(".cart-close");
+
+if (cartLink) {
+for (var i = 0; i < cartLink.length; i++) {
+      result = cartLink[i];
+      result.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      cartPopup.classList.add("popup-show");
+    });
+  }
+
+  cartClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.remove("popup-show");
+  });
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (cartPopup.classList.contains("popup-show")) {
+      evt.preventDefault();
+      cartPopup.classList.remove("popup-show");
+    }
+  }
+});
+}

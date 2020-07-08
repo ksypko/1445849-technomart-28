@@ -37,12 +37,16 @@
  	--popular-brown:#F9F5F0;
  	--checkbox-grey:#B5B5B5;
  	--border-darkblue:#405069;
+ 	--rgba-lightgrey:rgba(197,197,197,0.3);
+ 	--rgba-grey:rgba(169,169,169,0.3);
+ 	--rgba-white-0-3:rgba(255,255,255,0.3);
+ 	--rgba-white-0-5:rgba(255,255,255,0.5);
 }
 body {
 	min-width: 960px;
 	margin: 0px;
 	padding: 0px;
-	font-family: "Cuprum", sans-serif;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -51,40 +55,40 @@ body {
 	background-color: var(--basic-white);
 }
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 /* Grid */
 
 .page {
-  height: 100%;
+	height: 100%;
 }
 
 .page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
 }
 /* Container */
 
 .container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
 }
 
 /* Header */
@@ -142,7 +146,7 @@ img {
 	margin-left: 30px;
 }
 .header-description i {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: italic;
 	font-weight: normal;
 	font-size: 16px;
@@ -150,7 +154,7 @@ img {
 	color: var(--basic-red);
 }
 .header-phone {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 21px;
@@ -208,7 +212,7 @@ img {
 	background-position: 0 0;
 }
 .header-login:hover::before {
-	top: 14px;
+	top: 15px;
 	left: 19px;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='17' viewBox='0 0 20 17'%3E%3Cpath fill='%233D546F' d='M14.875 8.5L6 0v6H0v5h6v6z'/%3E%3Cpath fill='%233D546F' d='M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
@@ -298,7 +302,7 @@ img {
 }
 .header-checkout:active{
 	background-color: var(--basic-green);
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--rgba-white-0-5);
 }
 .header-cart-catalog {
 	background-color: var(--basic-red);
@@ -354,7 +358,7 @@ img {
 }
 .header-cart:active{
 	background-color: var(--special-darkblue);
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--rgba-white-0-5);
 }
 .header-bookmark{
 	display: block;
@@ -384,7 +388,7 @@ img {
 }
 .header-bookmark:active{
 	background-color: var(--special-darkblue);
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--rgba-white-0-5);
 }
 .search {
 	width: 270px;
@@ -397,7 +401,7 @@ img {
     padding-bottom: 9px;
     padding-left: 42px;
     border: none;
-    font-family: Cuprum;
+    font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
@@ -417,11 +421,14 @@ img {
 	top: 12px;
 	left: 17px;
 	cursor: pointer;
-	fill: var(--basic-white);	
+}
+input[type=search] + label path {
+	fill: var(--basic-white);
+	opacity: 0.3;
 }
 input[type=search]:hover+label path {
 	fill: var(--basic-white);
-	opacity: 0.3;
+	opacity: 1;
 }
 input[type=search]:focus+label path {
 	fill: var(--basic-red);
@@ -566,7 +573,7 @@ input[type=search]:focus+label path {
 }
 .contacts-title {
 	color: var(--basic-black);
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
@@ -578,7 +585,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 24px;
 }
 .contacts-content {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -606,7 +613,7 @@ input[type=search]:focus+label path {
 }
 .about-title {
 	color: var(--basic-black);
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
@@ -618,7 +625,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 25px;
 }
 .about-content {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -643,13 +650,13 @@ input[type=search]:focus+label path {
 	position: relative;
 }
 .about-company li::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 0;
-  width: 25px;
-  height: 2px;
-  background-color: var(--basic-red);
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	background-color: var(--basic-red);
 }
 .about-company li:last-child {
 	margin-bottom: 0px;
@@ -673,6 +680,12 @@ input[type=search]:focus+label path {
 	background-color: var(--basic-red);
 	font-size: 14px;
 	line-height: 18px;
+}
+.button:hover {
+	background-color: var(--button-hover-red);
+}
+.button:active {
+	background-color: var(--special-red);
 }
 /* Main */
 .main-category {
@@ -710,15 +723,15 @@ input[type=search]:focus+label path {
 	text-transform: uppercase;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-color: rgba(255,255,255,0.3);
+	background-color: var(--rgba-white-0-3);
 	color: var(--basic-white);
 	margin-left: 23px;
 }
 .category-link:hover {
-	background-color: rgba(197,197,197,0.3);
+	background-color: var(--rgba-lightgrey);
 }
 .category-link:active {
-	background-color: rgba(169,169,169,0.3);
+	background-color: var(--rgba-grey);
 }
 .category-new {
 	position: absolute;
@@ -846,6 +859,8 @@ input[type=search]:focus+label path {
 .popular {
 	background-color: var(--popular-brown);
 	margin-bottom: 20px;
+	display: flex;
+    justify-content: space-between;
 }
 .popular-title {
 	display: inline-block;
@@ -879,9 +894,9 @@ input[type=search]:focus+label path {
 	padding-bottom: 9px;
 	padding-right: 24px;
     padding-left: 24px;
-	float: right;
 	margin-right: 15px;
-    margin-top: 24px;
+    margin-top: 25px;
+    margin-bottom: 26px;
 }
 .popular-button-brands {
 	display: inline-block;
@@ -900,9 +915,9 @@ input[type=search]:focus+label path {
     padding-bottom: 9px;
     padding-right: 38px;
     padding-left: 39px;
-    float: right;
     margin-right: 19px;
-    margin-top: 24px;
+    margin-top: 25px;
+    margin-bottom: 26px;
 }
 .popular-images {
 	margin-bottom: 50px;
@@ -939,7 +954,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 70px;
 }
 .services-title {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
@@ -952,7 +967,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 25px;
 }
 .services p {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -962,7 +977,7 @@ input[type=search]:focus+label path {
 	padding: 0;
 }
 .services-button {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 21px;
@@ -988,7 +1003,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 67px;
 }
 .services-subtitle {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
@@ -1054,7 +1069,7 @@ input[type=search]:focus+label path {
 	left: 24px;
 	width: auto;
 	margin: 0 auto;
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 36px;
@@ -1163,7 +1178,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 16px;
 }
 .page-title {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
@@ -1210,7 +1225,7 @@ input[type=search]:focus+label path {
 	object-fit: contain;
 }
 .product-title {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
@@ -1224,7 +1239,7 @@ input[type=search]:focus+label path {
 	text-align: center;
 }
 .old-price {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 17px;
@@ -1246,7 +1261,7 @@ input[type=search]:focus+label path {
     margin-bottom: 21px;
 }
 .price {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 17px;
@@ -1364,7 +1379,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 25px;
 }
 .catalog-content {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1375,7 +1390,7 @@ input[type=search]:focus+label path {
 }
 /* Filters */
 .filters {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 15px;
@@ -1385,7 +1400,7 @@ input[type=search]:focus+label path {
 	margin-top:-3px;
 }
 .filters legend {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 17px;
@@ -1402,7 +1417,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 23px;
 }
 .filter-title {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1594,7 +1609,7 @@ input[type=search]:focus+label path {
     padding-left: 35px;
 }
 .filters button {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1616,7 +1631,7 @@ input[type=search]:focus+label path {
 	padding-bottom: 10px;
 	padding-left: 20px;
 	margin-bottom: 28px;
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1736,7 +1751,7 @@ input[type=search]:focus+label path {
  	left:0px;
 }
 .breadcrumbs-link {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1761,7 +1776,7 @@ input[type=search]:focus+label path {
   margin-right: 0;
 }
 .pagination-item a {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1793,7 +1808,6 @@ input[type=search]:focus+label path {
 	position: fixed;
 	top: 0;
 	right: 0;
-	bottom: 0;
 	left: 0;
 	margin: auto;
 	display: none;
@@ -1836,7 +1850,7 @@ input[type=search]:focus+label path {
 	margin-bottom: 11px;
 }
 .form-name, .form-email {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -1851,7 +1865,7 @@ input[type=search]:focus+label path {
     height: 34px;
 }
 .popup-form textarea {
-	font-family: PT Sans;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
@@ -1873,7 +1887,7 @@ input[type=search]:focus+label path {
 	display: block;
 	position: absolute;
 	top: 348px;
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -1917,15 +1931,28 @@ input[type=search]:focus+label path {
 }
 .popup-map {
 	width: 943px;
+	height: max-content;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 	border-top: 7px solid var(--basic-red);
-	z-index: 21;
-	left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(calc(-50% + 0px));
 }
 .popup-map img {
-  display: block;
+	display: block;
+	height: 449px;
+}
+.popup-map p {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.popup-map iframe {
+	position: relative;
+	z-index: 2;
+	border: none;
 }
 .map-close {
 	position: absolute;
@@ -1936,6 +1963,7 @@ input[type=search]:focus+label path {
 	background-color: transparent;
 	border: 0;
 	cursor: pointer;
+	z-index: 3;
 }
 .map-close::before,
 .map-close::after {
@@ -1957,15 +1985,14 @@ input[type=search]:focus+label path {
 	border-top: 7px solid var(--basic-red);
 	border-bottom: 112px solid var(--popup-grey);
 	background-color: var(--basic-white);
-	left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+	transform: translateY(calc(-50% + 0px));
 }
 .popup-cart-buttons {
 	text-align: center;
 }
 .order-button {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -1983,7 +2010,7 @@ input[type=search]:focus+label path {
     margin-right: 10px;
 }
 .continue-button {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -2001,7 +2028,7 @@ input[type=search]:focus+label path {
     margin-right: 10px;
 }
 .item-added {
-	font-family: Cuprum;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 24px;
@@ -2038,11 +2065,11 @@ input[type=search]:focus+label path {
 	background-color: var(--basic-red);
 }
 .cart-close::before {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .cart-close::after {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 /* Footer */
 .footer {
@@ -2152,13 +2179,10 @@ input[type=search]:focus+label path {
 	width: 145px;
 	margin: 0 auto;
 	padding: 0;
-	margin-right: 118px;
-}
-.footer-social ul{
-	margin: 0 auto;
-	padding: 0;
 	display: flex;
-	list-style: none;
+    list-style: none;
+    margin-left: 161px;
+    margin-right: 118px;
 }
 .social-button {
 	display: flex;
@@ -2176,12 +2200,11 @@ input[type=search]:focus+label path {
   background-color: var(--basic-red);
 }
 .footer-feedback{
-	width: 140px;
 	margin-left: 120px;
 }
 .footer-develop{
-	width: 100px;
 	margin: 0;
+	padding: 0;
   	justify-self: end;
   	margin-left: 50px;
 }
@@ -2210,7 +2233,8 @@ input[type=search]:focus+label path {
   0%,
   100% {
     transform: translateX(0);
-    
+    position: fixed;
+    bottom: 49%;
   }
 
   10%,

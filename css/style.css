@@ -1941,6 +1941,9 @@ input[type=search]:focus+label path {
 	display: block;
 	height: 449px;
 }
+.iframe-map {
+	border:0;
+}
 .popup-map p {
 	position: absolute;
 	padding: 0;
